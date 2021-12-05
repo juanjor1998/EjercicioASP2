@@ -6,6 +6,6 @@ namespace EjercicioASP2.Persistencia
 {
     public class Conexion
     {
-        private string _cadenaConexión;
+        
     }
 }
