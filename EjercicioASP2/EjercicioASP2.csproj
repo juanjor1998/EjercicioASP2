@@ -163,11 +163,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Dominio\Autores.cs" />
+    <Compile Include="Dominio\ControladoraFeria.cs" />
+    <Compile Include="Dominio\Lectores.cs" />
+    <Compile Include="Dominio\Libros.cs" />
+    <Compile Include="Dominio\Personas.cs" />
+    <Compile Include="Dominio\Ventas.cs" />
     <Compile Include="Persistencia\Conexion.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Persistencia\ControladoraPersistencia.cs" />
+    <Compile Include="Persistencia\PAutores.cs" />
+    <Compile Include="Persistencia\PLectores.cs" />
     <Compile Include="Presentacion\frmAutores.aspx.cs">
       <DependentUpon>frmAutores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,7 +237,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Dominio\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
