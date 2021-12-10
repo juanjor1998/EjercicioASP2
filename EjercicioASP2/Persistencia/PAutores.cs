@@ -29,5 +29,33 @@ namespace EjercicioASP2.Persistencia
             return lista;
         }
 
+        public bool AltaAut(Dominio.Autores pAutor)
+        {
+            string sql = "INSERT INTO Autor (idAutor,nombreAutor,apellidoAutor,fechaNac,fechaFall,nacionalidad) VALUES("
+                + pAutor.Id.ToString() + ",'"
+                + pAutor.Nombre + "','"
+                + pAutor.Apellido + "','"
+                + pAutor.FechaNac + "','"
+                + pAutor.FechaFall + "','"
+                + pAutor.Nacionalidad + "')";
+            return this._conexión.Consulta(sql);
+        }
+        public bool BajaAut(int pId)
+        {
+            string sql = "DELETE FROM Autor WHERE id=" + pId.ToString();
+            return this._conexión.Consulta(sql);
+        }
+
+        public bool ModificarAut(Dominio.Autores pAutor)
+        {
+            string sql = "UPDATE Autor SET "
+                + "nombreAutor='" + pAutor.Nombre + "',"
+                + "apellidoAutor='" + pAutor.Apellido + "',"
+                + "fechaNac='" + pAutor.FechaNac + "',"
+                + "fechaFall='" + pAutor.FechaFall + "',"
+                + "nacionalidad='" + pAutor.Nacionalidad + "' "
+                + "WHERE idAutor=" + pAutor.Id.ToString();
+            return this._conexión.Consulta(sql);
+        }
     }
 }

@@ -27,5 +27,28 @@ namespace EjercicioASP2.Persistencia
             }
             return lista;
         }
+
+        public bool AltaLect(Dominio.Lectores pLector)
+        {
+            string sql = "INSERT INTO Lector (idLector,nombreLector,apellidoLector) VALUES("
+                + pLector.Id.ToString() + ",'"
+                + pLector.Nombre + "','"
+                + pLector.Apellido + "')";
+            return this._conexión.Consulta(sql);
+        }
+        public bool BajaLect(int pId)
+        {
+            string sql = "DELETE FROM Lector WHERE id=" + pId.ToString();
+            return this._conexión.Consulta(sql);
+        }
+
+        public bool ModificarLect(Dominio.Lectores pLector)
+        {
+            string sql = "UPDATE Lector SET "
+                + "nombreLector='" + pLector.Nombre + "',"
+                + "apellidoLector='" + pLector.Apellido + "' "
+                + "WHERE idLector=" + pLector.Id.ToString();
+            return this._conexión.Consulta(sql);
+        }
     }
 }
