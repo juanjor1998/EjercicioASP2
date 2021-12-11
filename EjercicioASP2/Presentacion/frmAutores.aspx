@@ -30,47 +30,49 @@
         <div>
             <h1>Autores</h1>
             <div>
-                <label for="IdAutor">ID Autor</label>
-                <input id="txtIdAutor" name="IdAutor" type="text" />
+                <asp:Label for="IdAutor" ID="Label1" runat="server">ID </asp:Label>
+                <asp:TextBox ID="txtIdAutor" runat="server" name="IdAutor"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="NombreAutor">Nombre</label>
-                <input id="txtNombreAutor" name="NombreAutor" type="text" />
+                <asp:Label for="NombreAutor" ID="Label2" runat="server">Nombre </asp:Label>
+                <asp:TextBox ID="txtNombreAutor" runat="server" name="NombreAutor"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="ApellidoAutor">Apellido</label>
-                <input id="txtApellidoAutor" name="ApellidoAutor" type="text" />
+                <asp:Label for="ApellidoAutor" ID="Label3" runat="server">Apellido </asp:Label>
+                <asp:TextBox ID="txtApellidoAutor" runat="server" name="ApellidoAutor"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="FechaNacAutor">Fecha Nacimiento</label>
-                <input type="date" name="FechaNacAutor" id="dateFechaNacAutor" />
+                <asp:Label for="FechaNacAutor" ID="Label4" runat="server">Fecha de Nacimiento </asp:Label>
+                <asp:Calendar name="FechaNacAutor" ID="dateFechaNacAutor2" runat="server"></asp:Calendar>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="FechaFallAutor">Fecha Fallecimiento</label>
-                <input type="date" name="FechaFallAutor" id="dateFechaFallAutor" disabled="disabled"/>
-                <input type="button" value="Aplica" onclick="btnAplicaFechaFall()" />
+                <asp:Label for="FechaFallAutor" ID="Label5" runat="server">Fecha de Fallecimiento </asp:Label>
+                <asp:Calendar for="FechaFallAutor" ID="dateFechaFallAutor" runat="server" disabled="disabled"></asp:Calendar>
+                <asp:Button text="Aplica" OnClick="btnAplicaFechaFall()" runat="server" ></asp:Button>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="NacionalidadAutor">Nacionalidad</label>
-                <input type="text" name="NacionalidadAutor" id="txtNacionalidadAutor" />
+                <asp:Label for="NacionalidadAutor" ID="Label6" runat="server">Nacionalidad </asp:Label>
+                <asp:TextBox ID="txtNacionalidadAutor" runat="server" name="NacionalidadAutor"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <select id="lstAutores" onclick="clickLstAutores()" style="width:100%; height: 50%"></select>
+                <asp:ListBox ID="lstAutores" runat="server" style="width:100%; height: 50%"></asp:ListBox>
             </div>
             <div>
-                <input type="button" value="Alta" onclick="btnAltaAutor" style="width:100px; height:30px" />
+                <asp:Button Text="Alta" OnClick="btnAltaAutor_Click" style="width:100px; height:30px" runat="server"></asp:Button>
                 &nbsp;&nbsp;&nbsp;
-                <input type="button" value="Baja" onclick="btnBajaAutor" style="width:100px; height:30px" />
+                <asp:Button Text="Baja" OnClick="btnBajaAutor_Click" style="width:100px; height:30px" runat="server"></asp:Button>
                 &nbsp;&nbsp;&nbsp;
-                <input type="button" value="Modificar" onclick="btnModificarAutor" style="width:100px; height:30px" />
+                <asp:Button Text="Modificar" OnClick="btnModificarAutor_Click" style="width:100px; height:30px" runat="server"></asp:Button>
                 &nbsp;&nbsp;&nbsp;
-                <input type="button" value="Limpiar" onclick="btnLimpiarAutor" style="width:100px; height:30px" />
+                <asp:Button Text="Limpiar" OnClick="btnLimpiarAutor_Click" style="width:100px; height:30px" runat="server"></asp:Button>
+                &nbsp;&nbsp;&nbsp;
+                <asp:Label Text="  " ID="lblMensajeAutor" runat="server"></asp:Label>
             </div> 
         </div>
     </form>

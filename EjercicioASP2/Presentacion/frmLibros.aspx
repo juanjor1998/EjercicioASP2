@@ -14,62 +14,64 @@
                 <h1>Libros</h1>
             </div>
             <div>
-                <label for="IdLibro">ID Libro</label>
-                <input id="txtIdLibro" name="IdLibro" type="text" />
+                <asp:Label for="IdLibro" ID="Label1" runat="server">ID Libro</asp:Label>
+                <asp:TextBox ID="txtIdLibro" name="IdLibro" runat="server"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="TituloLibro">Titulo</label>
-                <input id="txtTituloLibro" name="TituloLibro" type="text" />
+                <asp:Label for="TituloLibro" ID="Label2" runat="server">Titulo</asp:Label>
+                <asp:TextBox ID="txtTituloLibro" name="TituloLibro" runat="server"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="GeneroLibro">Genero</label>
-                <select name="GeneroLibro">
-                    <option>----------------------------</option>
-                    <option>Accion                      </option>
-                    <option>Aventura                    </option>
-                    <option>Ciencia Ficcion             </option>
-                    <option>Historia                    </option>
-                    <option>Economia/Finanzas           </option>
-                    <option>Infantiles                  </option>
-                    <option>Otros                       </option>
-                </select>
+                <asp:Label for="GeneroLibro" ID="Label3" runat="server">Genero</asp:Label>
+                <asp:DropDownList ID="drpGenero" runat="server"> 
+                    <asp:ListItem >            -               </asp:ListItem>
+                    <asp:ListItem >Accion                      </asp:ListItem>
+                    <asp:ListItem >Aventura                    </asp:ListItem>
+                    <asp:ListItem >Ciencia Ficcion             </asp:ListItem>
+                    <asp:ListItem >Historia                    </asp:ListItem>
+                    <asp:ListItem >Economia/Finanzas           </asp:ListItem>
+                    <asp:ListItem >Infantiles                  </asp:ListItem>
+                    <asp:ListItem >Otros                       </asp:ListItem>
+                </asp:DropDownList>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="AñoLibro">Año</label>
-                <input type="date" name="AñoLibro" id="dateAñoLibro" />
+                <asp:Label for="AñoLibro" ID="Label4" runat="server">Año Libro</asp:Label>
+                <asp:TextBox ID="dateAñoLibro" name="AñoLibro" runat="server" type="date"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="AutorLibro">Autor</label>
-                <select id="cmbAutordeLibro">
+                <asp:Label for="AutorLibro" ID="Label5" runat="server">Autor del Libro</asp:Label>
+                <asp:DropDownList ID="cmbAutordeLibro" runat="server" name="AutorLibro">
 
-                </select>
+                </asp:DropDownList>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="PrecioLibro">Precio</label>
-                <input type="text" name="PrecioLibro" id="txtPrecioLibro" />
+                <asp:Label for="PrecioLibro" ID="Label6" runat="server">Precio del Libro</asp:Label>
+                <asp:TextBox ID="txtPrecioLibro" name="PrecioLibro" runat="server" type="number" ></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <label for="ComentarioLibro">Comentario (Opcional)</label>
-                <input type="text" name="ComentarioLibro" id="txtComentarioLibro" />
+                <asp:Label for="ComentarioLibro" ID="Label7" runat="server">Comentario (Opcional)</asp:Label>
+                <asp:TextBox ID="txtComentarioLibro" name="ComentarioLibro" runat="server"></asp:TextBox>
             </div>
             &nbsp;&nbsp;&nbsp;
             <div>
-                <select id="lstLibros" onclick="clickLstLibros()" style="width:100%; height: 33%"></select>
+                <asp:ListBox ID="lstLibros" runat="server" style="width:100%; height: 33%"></asp:ListBox>
             </div>
             <div style="height: 40px; width: 1510px">
-                <input type="button" value="Alta" onclick="btnAltaLibro" style="width:100px; height:30px" />
+                <asp:Button Text="Alta" OnClick="btnAltaLibro_Click" style="width:100px; height:30px" runat="server"></asp:Button>
                 &nbsp;&nbsp;&nbsp;
-                <input type="button" value="Baja" onclick="btnBajaLibro" style="width:100px; height:30px" />
+                <asp:Button Text="Baja" OnClick="btnBajaLibro_Click" style="width:100px; height:30px" runat="server"></asp:Button>
                 &nbsp;&nbsp;&nbsp;
-                <input type="button" value="Modificar" onclick="btnModificarLibro" style="width:100px; height:30px" />
+                <asp:Button Text="Modificar" OnClick="btnModificarLibro_Click" style="width:100px; height:30px" runat="server"></asp:Button>
                 &nbsp;&nbsp;&nbsp;
-                <input type="button" value="Limpiar" onclick="btnLimpiarLibro" style="width:100px; height:30px" />
+                <asp:Button Text="Limpiar" OnClick="btnLimpiarLibro_Click" style="width:100px; height:30px" runat="server"></asp:Button>
+                &nbsp;&nbsp;&nbsp;
+                <asp:Label Text="  " ID="labelMensajeLibros" runat="server"></asp:Label>
             </div> 
         </div>
     </form>
